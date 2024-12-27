@@ -67,7 +67,7 @@ const SkillsSection: FC = () => {
     };
 
     return (
-        <section className="relative py-16 px-4">
+        <section className="relative py-16 px-4" id="skills">
             <GridBackground/>
             <div
                 className="container mx-auto text-center relative z-10 border-4 rounded-xl shadow-2xl p-8"
