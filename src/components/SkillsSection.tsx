@@ -1,12 +1,12 @@
 "use client";
 
-import { FC, useState } from "react";
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaJava, FaReact, FaGitAlt } from "react-icons/fa";
-import { SiCplusplus, SiMongodb, SiNextdotjs, SiPostman } from "react-icons/si";
+import {FC, useState} from "react";
+import {FaHtml5, FaCss3Alt, FaJsSquare, FaJava, FaReact, FaGitAlt} from "react-icons/fa";
+import {SiCplusplus, SiMongodb, SiNextdotjs, SiPostman} from "react-icons/si";
 import {GridBackground} from "@/components/ui/grid-background.tsx";
 
 const SkillsSection: FC = () => {
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const [mousePosition, setMousePosition] = useState({x: 0, y: 0});
     const [borderColors, setBorderColors] = useState({
         top: "transparent",
         right: "transparent",
@@ -15,19 +15,19 @@ const SkillsSection: FC = () => {
     });
 
     const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
-        const { clientX, clientY } = event;
+        const {clientX, clientY} = event;
         const container = event.currentTarget.getBoundingClientRect();
         const containerCenterX = container.left + container.width / 2;
         const containerCenterY = container.top + container.height / 2;
 
-        setMousePosition({ x: clientX, y: clientY });
+        setMousePosition({x: clientX, y: clientY});
 
         const top = clientY < containerCenterY ? "rgba(59, 130, 246, .5)" : "transparent";
         const bottom = clientY > containerCenterY ? "rgba(59, 130, 246, .5)" : "transparent";
         const left = clientX < containerCenterX ? "rgba(59, 130, 246, .5)" : "transparent";
         const right = clientX > containerCenterX ? "rgba(59, 130, 246, .5)" : "transparent";
 
-        setBorderColors({ top, right, bottom, left });
+        setBorderColors({top, right, bottom, left});
     };
 
     const handleMouseEnter = () => {
@@ -43,20 +43,20 @@ const SkillsSection: FC = () => {
     };
 
     const skills = [
-        { id: 1, name: "HTML", icon: <FaHtml5 className="w-10 h-10 text-orange-500" /> },
-        { id: 2, name: "CSS", icon: <FaCss3Alt className="w-10 h-10 text-blue-500" /> },
-        { id: 3, name: "JavaScript", icon: <FaJsSquare className="w-10 h-10 text-yellow-500" /> },
-        { id: 4, name: "Java", icon: <FaJava className="w-10 h-10 text-red-500" /> },
-        { id: 5, name: "C++", icon: <SiCplusplus className="w-10 h-10 text-blue-400" /> },
-        { id: 6, name: "MongoDB", icon: <SiMongodb className="w-10 h-10 text-green-500" /> },
-        { id: 7, name: "React", icon: <FaReact className="w-10 h-10 text-blue-300" /> },
-        { id: 8, name: "Next.js", icon: <SiNextdotjs className="w-10 h-10 text-white" /> },
-        { id: 9, name: "Git", icon: <FaGitAlt className="w-10 h-10 text-orange-400" /> },
-        { id: 10, name: "Postman", icon: <SiPostman className="w-10 h-10 text-orange-500" /> },
+        {id: 1, name: "HTML", icon: <FaHtml5 className="w-10 h-10 text-orange-500"/>},
+        {id: 2, name: "CSS", icon: <FaCss3Alt className="w-10 h-10 text-blue-500"/>},
+        {id: 3, name: "JavaScript", icon: <FaJsSquare className="w-10 h-10 text-yellow-500"/>},
+        {id: 6, name: "MongoDB", icon: <SiMongodb className="w-10 h-10 text-green-500"/>},
+        {id: 7, name: "React", icon: <FaReact className="w-10 h-10 text-blue-300"/>},
+        {id: 8, name: "Next.js", icon: <SiNextdotjs className="w-10 h-10 text-white"/>},
+        {id: 9, name: "Git", icon: <FaGitAlt className="w-10 h-10 text-orange-400"/>},
+        {id: 10, name: "Postman", icon: <SiPostman className="w-10 h-10 text-orange-500"/>},
+        {id: 4, name: "Java", icon: <FaJava className="w-10 h-10 text-red-500"/>},
+        {id: 5, name: "C++", icon: <SiCplusplus className="w-10 h-10 text-blue-400"/>},
     ];
 
     const getTransformStyle = () => {
-        const maxAngle = 45;
+        const maxAngle = 15;
         const offsetX = (mousePosition.x - window.innerWidth / 2) / 50;
         const offsetY = (mousePosition.y - window.innerHeight / 2) / 50;
 
@@ -68,7 +68,7 @@ const SkillsSection: FC = () => {
 
     return (
         <section className="relative py-16 px-4">
-            <GridBackground />
+            <GridBackground/>
             <div
                 className="container mx-auto text-center relative z-10 border-4 rounded-xl shadow-2xl p-8"
                 onMouseMove={handleMouseMove}
@@ -86,7 +86,7 @@ const SkillsSection: FC = () => {
                     borderLeftColor: borderColors.left,
                 }}
             >
-                <h2 className="text-4xl font-bold mb-6 fonro">Skills</h2>
+                <h2 className="text-4xl font-bold mb-6 fonrob">Skills</h2>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
                     {skills.map((skill) => (
                         <div
@@ -96,7 +96,8 @@ const SkillsSection: FC = () => {
                             <div className="mb-4">{skill.icon}</div>
                             <h3 className="font-semibold text-lg">{skill.name}</h3>
                             {/* Inner Glow Effect */}
-                            <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-gray-900 via-gray-800 to-black opacity-10 blur-md pointer-events-none"></div>
+                            <div
+                                className="absolute inset-0 rounded-xl bg-gradient-to-br from-gray-900 via-gray-800 to-black opacity-10 blur-md pointer-events-none"></div>
                         </div>
                     ))}
                 </div>
