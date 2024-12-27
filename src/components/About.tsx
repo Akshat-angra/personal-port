@@ -1,53 +1,56 @@
-import { GraduationCap, Code, Brain, Coffee } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
+import { GridBackground } from "./ui/grid-background";
 
 export default function About() {
-  const highlights = [
-    {
-      icon: <GraduationCap className="w-6 h-6" />,
-      title: "Education",
-      description: "Computer Science Major with focus on AI and Web Technologies",
-    },
-    {
-      icon: <Code className="w-6 h-6" />,
-      title: "Technical Skills",
-      description: "Proficient in React, TypeScript, Python, and Java",
-    },
-    {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Interests",
-      description: "Machine Learning, Web Development, and Open Source",
-    },
-    {
-      icon: <Coffee className="w-6 h-6" />,
-      title: "Experience",
-      description: "2 Internships and Multiple Personal Projects",
-    },
-  ];
-
   return (
-    <section id="about" className="py-20 bg-muted/50">
-      <div className="container mx-auto px-4">
-        <h2 className="section-title">About Me</h2>
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <p className="text-lg text-muted-foreground">
-            I'm a Pre final year Computer Science student passionate about creating innovative
-            solutions through technology. When I'm not coding, you'll find me participating
-            in hackathons or contributing to open-source projects.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {highlights.map((item, index) => (
-            <Card key={index} className="border-none shadow-lg">
-              <CardContent className="pt-6">
-                <div className="text-primary mb-4">{item.icon}</div>
-                <h3 className="font-semibold mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+    <div>
+      <div className="about-section relative py-8 px-6 flex flex-col items-center justify-center text-center bg-muted/50">
+      <GridBackground />
+        <motion.h2
+          className="text-4xl font-bold mb-12 fonrob"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          About Me
+        </motion.h2>
+
+        <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+          <motion.div
+            className="image-section md:w-1/2 flex justify-center"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <img
+              src="https://chedo.in/wp-content/uploads/2022/07/front-image-min-1-min.png"
+              alt="About Me"
+              className="about-image w-3/4 h-auto rounded-lg transform hover:scale-105 transition-all duration-300"
+            />
+          </motion.div>
+          <motion.div
+            className="text-section md:w-1/2 text-center md:text-left border-t-4 border-l-4 border-blue-300 pt-6 pl-6 rounded-xl"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <span className="font-semibold text-4xl md:text-6xl text-blue-300">
+              <span className="text-primary">I'm Akshat</span>, a Web developer
+            </span>
+            <p className="about-description md:text-lg text-base mt-6 md:pr-[20%]">
+              I'm a <span className="font-semibold">Web Developer</span> with a
+              passion for creating dynamic and responsive web applications. I
+              specialize in the <span className="font-semibold">MERN</span>{" "}
+              stack, and I love building innovative and scalable solutions. My
+              focus is always on delivering high-quality user experiences
+              through code that is clean, maintainable, and efficient.
+            </p>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

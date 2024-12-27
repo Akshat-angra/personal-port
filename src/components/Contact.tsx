@@ -3,12 +3,16 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
+import {GridBackground} from "@/components/ui/grid-background.tsx";
+import {FloatingElements} from "@/components/ui/floating-elements.tsx";
 
 export default function Contact() {
   return (
     <section id="contact" className="py-20">
+      <GridBackground />
+      <FloatingElements />
       <div className="container mx-auto px-4">
-        <h2 className="section-title">Get In Touch</h2>
+        <h2 className="section-title fonrob">Get In Touch</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           <div>
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>

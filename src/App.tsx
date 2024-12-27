@@ -2,10 +2,10 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
-import Skills from "@/components/skills/Skills";
 import Contact from "@/components/Contact";
 import { Footer } from "@/components/layout/Footer";
 import { useEffect } from "react";
+import SkillsSection from "./components/SkillsSection";
 
 export default function App() {
   useEffect(() => {
@@ -35,7 +35,7 @@ export default function App() {
         <Hero />
         <About />
         <Projects />
-        <Skills />
+        <SkillsSection />
         <Contact />
       </main>
       <Footer />

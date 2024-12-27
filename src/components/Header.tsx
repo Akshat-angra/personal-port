@@ -18,7 +18,7 @@ export default function Header() {
     <header className="fixed w-full bg-background/80 backdrop-blur-md z-50 border-b">
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
-          <a href="#" className="text-xl font-semibold text-primary">
+          <a href="/" className="text-xl font-semibold text-primary">
             Akshat Angra
           </a>
           
@@ -34,14 +34,14 @@ export default function Header() {
             ))}
             <div className="flex items-center space-x-4">
               <ThemeToggle />
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Akshat-angra" target="_blank" rel="noopener noreferrer">
                 <Github className="w-5 h-5 hover:text-primary transition-colors" />
               </a>
               <a href="https://www.linkedin.com/in/akshatangra/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5 hover:text-primary transition-colors" />
               </a>
               <Button variant="default" size="sm">
-                <Mail className="w-4 h-4 mr-2" /> Contact
+                <Mail className="w-4 h-4 mr-2" /> <a href="#contact">Contact</a>
               </Button>
             </div>
           </div>
