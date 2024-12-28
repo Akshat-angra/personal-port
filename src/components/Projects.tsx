@@ -9,7 +9,7 @@ export default function Projects() {
             description:
                 "A machine learning-powered study assistant that uses ChatGPT API to curate content, helping students organize and optimize their learning process by providing personalized learning paths and study materials.",
             image:
-                "./public/images/insightarcai.png",
+                "images/insightarcai.png",
             github: "https://github.com/Akshat-angra/InsightArcAi",
             demo: "",
         },
@@ -17,7 +17,7 @@ export default function Projects() {
             title: "FitFusionHub",
             description:
                 "Your ultimate fitness companion, FitFusionHub is designed to offer personalized fitness plans tailored to your unique goals. Experience a smarter way to stay fit with expertly curated diet, exercise, and wellness recommendations.",
-            image: "./public/images/fitfusionhub.png",
+            image: "images/fitfusionhub.png",
             github: "https://github.com/Akshat-angra/FitFusionHub",
             demo: "",
         },
@@ -25,7 +25,7 @@ export default function Projects() {
             title: "Shop-Cart",
             description:
                 "A user-friendly e-commerce platform designed to provide a seamless shopping experience with intuitive navigation, secure checkout, and dynamic product updates.",
-            image: "./public/images/shop-cart.png",
+            image: "images/shop-cart.png",
             github: "https://github.com/Akshat-angra/Shop-Cart",
             demo: "",
         }
