@@ -7,7 +7,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { href: "#home", label: "Home" },
+    { href: "#", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
     { href: "#skills", label: "Skills" },
@@ -21,7 +21,7 @@ export default function Header() {
           <a href="/" className="text-xl font-semibold text-primary">
             Akshat Angra
           </a>
-          
+
           <div className="hidden md:flex items-center space-x-6">
             {menuItems.map((item) => (
               <a

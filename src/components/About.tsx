@@ -3,7 +3,7 @@ import { GridBackground } from "./ui/grid-background";
 
 export default function About() {
   return (
-    <div>
+    <div id="about">
       <div className="about-section relative py-8 px-6 flex flex-col items-center justify-center text-center bg-muted/50">
       <GridBackground />
         <motion.h2
