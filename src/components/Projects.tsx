@@ -33,9 +33,17 @@ export default function Projects() {
 
     return (
         <section id="projects" className="py-20">
-            <div className="container mx-auto p-6 sm:p-8 border-t-4 border-r-4 border-blue-400 rounded-2xl shadow-2xl">
-                <h2 className="section-title fonrob text-2xl font-semibold mb-6">Featured Projects</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+                className="container mx-auto p-6 sm:p-8 border-t-4 border-r-4 border-blue-400 rounded-2xl shadow-2xl relative">
+                <h2 className="section-title fonrob text-4xl font-semibold relative">
+                    Featured Projects
+                    <img
+                        src="/images/highlight.svg"
+                        alt="highlight"
+                        className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-40 md:w-80"
+                    />
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                     {projects.map((project, index) => (
                         <Card key={index} className="overflow-hidden shadow-lg border-none">
                             <img
