@@ -87,7 +87,7 @@ export function Footer() {
                     </div>
 
                     <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
-                        <p className="text-gray-500 mb-4">© {new Date().getFullYear()} All rights reserved.</p>
+                        <p className="text-gray-500 mb-4">Copyright <span className="text-blue-400">©</span> {new Date().getFullYear()} Akshat Angra All rights reserved.</p>
                         <span
                             className="mt-8 bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 text-white p-3 rounded-lg shadow-lg">
     Building InsightArcAI.
